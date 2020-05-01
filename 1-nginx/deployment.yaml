@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: nginx:1.17.10-alpine
+        command: ["/bin/sh","-c","echo 'Code.education Rocks' > /usr/share/nginx/html/index.html; nginx -g 'daemon off;'"]
+        name: nginx
