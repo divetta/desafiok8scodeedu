@@ -18,9 +18,8 @@ Como ótimo desenvolvedor(a), você deverá criar o teste dessa função.
 Ative o processo de CI no Google Cloud Build para garantir que a cada PR criada faça com que os testes sejam executados.
 Gere a imagem desse aplicativo de forma otimizada e publique-a no Docker Hub
 Utilizando o Kubernetes, disponibilize o serviço do tipo Load Balancer que quando acessado pelo browser acesse a aplicação criada em Go.
-Entrega via Github:
 
-## Entrega
+## Entrega via Github:
 
 Cria uma pasta para cada etapa dessa fase contendo os arquivos .yml do kubernetes
 No caso do Desafio Go, o fonte da aplicação, Dockerfile, etc também devem ficar disponíveis.

@@ -1,0 +1,22 @@
+steps:
+
+- id: "Testing project"
+  name: 'gcr.io/cloud-builders/go'
+  args: ['test', 'go-lang-http']
+  env: ['CGO_ENABLED=0','GOPATH=.']
+
+- id: "Building image"
+  name: 'gcr.io/cloud-builders/docker'
+  args: 
+  - 'build'
+  - '--build-arg'
+  - 'version=1.0.0'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/go-lang-http:latest'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/go-lang-http:1.0.0'
+  - '.'
+
+images:
+- 'gcr.io/$PROJECT_ID/go-lang-http:latest'
+- 'gcr.io/$PROJECT_ID/go-lang-http:1.0.0'
