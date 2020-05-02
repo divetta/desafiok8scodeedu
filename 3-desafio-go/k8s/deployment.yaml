@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: go-lang-http
+  name: go-lang-http
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-lang-http
+  template:
+    metadata:
+      labels:
+        app: go-lang-http
+    spec:
+      containers:
+      - image: divetta/go-lang-http
+        name: go-lang-http
+        ports:
+        - containerPort: 8000        
