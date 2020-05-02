@@ -15,8 +15,7 @@ steps:
   - 'gcr.io/$PROJECT_ID/go-lang-http:latest'
   - '-t'
   - 'gcr.io/$PROJECT_ID/go-lang-http:1.0.0'
-  - '.'
-  env: ['CGO_ENABLED=0','GOPATH=./3-desafio-go/']
+  - './3-desafio-go/'
 
 images:
 - 'gcr.io/$PROJECT_ID/go-lang-http:latest'
