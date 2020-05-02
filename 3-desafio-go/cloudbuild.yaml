@@ -3,7 +3,7 @@ steps:
 - id: "Testing project"
   name: 'gcr.io/cloud-builders/go'
   args: ['test', 'go-lang-http']
-  env: ['CGO_ENABLED=0','GOPATH=.']
+  env: ['CGO_ENABLED=0','GOPATH=./3-desafio-go/']
 
 - id: "Building image"
   name: 'gcr.io/cloud-builders/docker'
